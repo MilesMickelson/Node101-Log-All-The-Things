@@ -48,9 +48,9 @@ app.get('/', function( req, res) {
 app.get('/logs', (req, res) => {
   csv()
     .fromFile('./log.csv')
-    .then((obj)=>{
+    .then((obj) => {
       res.json(obj);
-  })
+    })
 });
 
 app.get('*', function( req, res){
